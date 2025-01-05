@@ -10,8 +10,8 @@ export default [
     icon: { icon: 'tabler-file' },
   },
   {
-    title: 'About',
-    to: { name: 'about' },
+    title: 'Jobs',
+    to: { name: 'jobs' },
     icon: { icon: 'tabler-user' },
   },
 ]
