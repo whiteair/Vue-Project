@@ -32,7 +32,7 @@ const navigateToJobDetails = (jobId: number) => {
 }
 
 const applyToJob = (jobId: number) => {
-  alert(`Applying for job ID: ${jobId}`)
+  console.log('Applying done')
 }
 
 onMounted(() => {
