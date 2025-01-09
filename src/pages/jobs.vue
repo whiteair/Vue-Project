@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import axios from 'axios'
+import { apiClient } from '@/utils/api'
 import JobCard from '@/components/JobCard.vue'
 
 // Define job interface
@@ -18,7 +18,7 @@ const jobs = ref<Job[]>([])
 
 const fetchJobs = async () => {
   try {
-    const response = await axios.get<Job[]>('http://localhost:8000/api/v1/jobs/')
+    const response = await apiClient.get<Job[]>('/jobs')
 
     jobs.value = response.data
   }
