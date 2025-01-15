@@ -13,7 +13,7 @@ export default defineComponent({
     const showMore = ref(false)
 
     const truncatedDescription = computed(() =>
-      showMore.value || props.job.description.length <= 100
+      showMore.value || !props.job.description || props.job.description.length <= 100
         ? props.job.description
         : `${props.job.description.slice(0, 100)}...`,
     )
